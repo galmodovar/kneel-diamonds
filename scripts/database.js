@@ -73,7 +73,7 @@ export const setStyle = (id) => {
     database.orderBuilder.styleId = id
 }
 export const setType = (id) => {
-    database.orderBuilder.styleId = id
+    database.orderBuilder.typeId = id
 }
 
 
