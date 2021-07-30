@@ -1,8 +1,4 @@
 import { getStyles, setStyle, getOrderBuilder } from "./database.js"
-//import { addCustomOrder } from "./database.js"
-
-
-
 
 
 document.addEventListener(
@@ -24,10 +20,6 @@ export const JewelryStyles = () => {
 
     //The .map() method iterates the array, just like for..of does. 
     //Unlike a for..of loop, it invokes the function that you define
-    //     return `<li>
-    //     <input type="radio" name="style" value="${style.id}" /> ${style.style}
-    // </li>`
-    // })
     
     const listItemsArray = styles.map(style => {
     if (style.id === orderBuilder.styleId) {

@@ -17,12 +17,7 @@ export const Metals = () => {
     const orderBuilder = getOrderBuilder()
     let html = "<ul>"
 
-    // This is how you have been converting objects to <li> elements
-    // const listItemsArray = metals.map(metal => {
-    //     return `<li>
-    //     <input type="radio" name="metal" value="${metal.id}" /> ${metal.metal}
-    // </li>`
-    // }) 
+   
 
     const listItemsArray = metals.map(metal => {
         if (metal.id === orderBuilder.metalId) {

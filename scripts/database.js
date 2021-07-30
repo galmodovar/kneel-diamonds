@@ -3,9 +3,15 @@
     This module contains all of the data, or state, for the
     application. It exports two functions that allow other
     modules to get copies of the state.
-
-*/
+    
+    */
 const database = {
+    //empty array to store our order objects from orderBuilder
+    customOrders: [],
+
+    //empty object to store user choices
+    orderBuilder: {},
+
     styles: [
         { id: 1, style: "Classic", price: 500 },
         { id: 2, style: "Modern", price: 710 },
@@ -30,14 +36,9 @@ const database = {
         { id: 1, type: "Ring" },
         { id: 2, type: "Earring" },
         { id: 3, type: "Necklace" }
-    ],
-    customOrders: [
-        
-    ],
-    orderBuilder: {
-        
-    }
+    ]
 }
+
 // Functions make a copy of our data to be used in other modules
 
 export const getMetals = () => {
@@ -81,15 +82,15 @@ export const setType = (id) => {
 }
 
 
-//function will take the temporary choices being stored in 
-//the orderBuilder state object and make them permanent.
+/*function will take the temporary choices being stored in 
+the orderBuilder state object and make them permanent.*/
 
 export const addCustomOrder = () => {
     // Copy the current state of user choices
     const newOrder = {...database.orderBuilder}
 
-    // Add a new primary key to the object
-    //added if else to assign id if database is blank
+    /*Add a new primary key to the object
+    added if else to assign id if database is blank*/
     
     let lastIndex = null
     if (database.customOrders.length === 0) {
@@ -114,4 +115,3 @@ export const addCustomOrder = () => {
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 
-//console.log(database.customOrders)

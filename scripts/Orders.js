@@ -43,19 +43,15 @@ const buildOrderListItem = (order) => {
         }
     }
                 
-                const costString = totalCost().toLocaleString("en-US", {
-                    style: "currency",
-                    currency: "USD"
-                })
+    const costString = totalCost().toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD"
+        })
                 
-                return `<li>
-                    Order #${order.id} was placed on ${order.timestamp}
-                    and it costs ${costString}
-                </li>`
-                // `<li>
-                // Order #${order.id} cost ${costString}
-                // </li>`
-                
+        return `<li>
+        Order #${order.id} was placed on ${order.timestamp}
+        and it costs ${costString}
+        </li>`
             }
     
 
