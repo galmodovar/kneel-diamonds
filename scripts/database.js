@@ -59,6 +59,10 @@ export const getType = () => {
     return database.type.map(item => ({...item}) )
 }
 
+export const getOrderBuilder = () => {
+    return database.orderBuilder
+}
+
 //Functions responsible for setting State when a click event takes place
 
 export const setMetal = (id) => {
